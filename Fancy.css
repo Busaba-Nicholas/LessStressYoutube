@@ -29,7 +29,7 @@
     left: 5%;
     width: 90%;
     height: 100%;
-    font-size: clamp(0.75rem, 2.5vw, 2rem);
+    font-size: clamp(1vw, 16px, 5vw);
 
     background-color: rgb(233, 233, 233);
     border: solid #000;

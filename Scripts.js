@@ -33,7 +33,7 @@ function onYouTubePlayerAPIReady() {
     videoId: 'M7lc1UVf-VE',
     playerVars: {
       playlist: 'M7lc1UVf-VE',
-      loop: 1
+      loop: 1,
     }
   });
   reSizes();
@@ -43,7 +43,7 @@ function onYouTubePlayerAPIReady() {
 //Forces video to go back to user inputted time
 setInterval(function() {
     if (document.getElementById('StartTime').value != "") {
-      if (player.playerInfo.currentTime < player.playerInfo.duration) {
+      if (player.playerInfo.currentTime < document.getElementById('StartTime').value) {
         player.seekTo(document.getElementById('StartTime').value, true);
       }
       if (document.getElementById('EndTime').value != "") {

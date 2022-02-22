@@ -6,6 +6,5 @@ I sometimes enjoy having youtube in the background as I work, but with the ads a
 
 So I decided to start making something that is estenially a youtube video player, but without all the other elements you won't need.
 
-# Version 0.5
-2/21/22
+# Version 0.5 (2/21/22)
 I released the first version, It's very barebones and lacks a lot of featues and quality of life, but it gets the job done.

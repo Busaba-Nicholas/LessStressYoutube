@@ -1,0 +1,39 @@
+:root {
+    background-color: black;
+    --Title-center: max(5vw, 50%);
+    color: white;
+}
+
+.videoPlacement {
+    position: absolute;
+	left: var(--Title-center);
+  	transform: translate(calc(-1*var(--Title-center)), 0%);
+    
+    width: clamp(5vw, 1280px, 95vw);
+}
+
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content 20px max-content 20px max-content;
+    align-items: center;
+}
+
+.NewOne {
+    color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 5%;
+    width: 90%;
+    height: 100%;
+    font-size: clamp(0.75rem, 2.5vw, 2rem);
+
+    background-color: rgb(233, 233, 233);
+    border: solid #000;
+    border: 50px;
+    /*border-radius: 1px;*/
+    border-color: black;
+}

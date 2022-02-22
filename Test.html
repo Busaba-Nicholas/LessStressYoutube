@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 1. ytplayer code: https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '360',
+      width: '640',
+      videoId: 'M7lc1UVf-VE'
+    });
+  }
+// 2. get player.playerInfo.currentTime
+window.onclick = () => {
+  console.log(player);
+  alert(player.playerInfo.currentTime);
+}
+        </script>
+    </head>
+    <div id="ytplayer"></div>
+</html>

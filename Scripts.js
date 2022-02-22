@@ -42,6 +42,9 @@ function onYouTubePlayerAPIReady() {
 //Forces video to start at user inputted time
 //Forces video to go back to user inputted time
 setInterval(function() {
+    if (player.playerInfo.currentTime == player.playerInfo.duration) {
+      player.seekTo(0, true);
+    }
     if (document.getElementById('StartTime').value != "") {
       if (player.playerInfo.currentTime < document.getElementById('StartTime').value) {
         player.seekTo(document.getElementById('StartTime').value, true);

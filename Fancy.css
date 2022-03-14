@@ -4,7 +4,7 @@
     color: white;
 }
 
-.videoPlacement {
+.Placement {
     position: absolute;
 	left: var(--Title-center);
   	transform: translate(calc(-1*var(--Title-center)), 0%);
@@ -12,28 +12,79 @@
     width: clamp(5vw, 1280px, 95vw);
 }
 
-.Grid {
+.GridReplace {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content 20px max-content 20px max-content;
+    grid-template-rows: max-content;
     align-items: center;
 }
 
-.NewOne {
+.GridLoop {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-rows: max-content max-content;
+    align-items: center;
+}
+
+.GridTwoButtons {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: max-content;
+}
+
+.GridForwardBackward {
+    display: grid;
+    grid-template-columns: 21.27% 14.18% 7.09% 14.92% 7.09% 14.18% 21.27%;
+    grid-template-rows: max-content;
+    align-items: center;
+}
+
+.TextBoxLoop {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 94%;
+    height: 90%;
+    font-size: max-content;
+}
+
+/* Custom button, needed to avoid message when clicking it */
+.ButtonTemplate {
     color: black;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    left: 5%;
-    width: 90%;
-    height: 100%;
     font-size: clamp(1vw, 16px, 5vw);
 
-    background-color: rgb(233, 233, 233);
-    border: solid #000;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*border: solid #000;
     border: 50px;
-    /*border-radius: 1px;*/
-    border-color: black;
+    border-radius: 1px;
+    border-color: black;*/
+}
+
+.ButtonTop {
+    background-color: rgb(233, 233, 233);
+    width: 90%;
+    height: 100%;
+}
+
+.ButtonRed {
+    background-color: rgb(179, 32, 32);
+    width: 95%;
+    height: 20px;
+    font-size: 16px;
+}
+
+.ButtonCurrentTime {
+    background-color: rgb(233, 233, 233);
+    width: 95%;
+    height: 20px;
+    font-size: 16px;
 }

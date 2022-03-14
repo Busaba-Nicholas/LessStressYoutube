@@ -10,32 +10,52 @@
     </script>
 
     <body id = "main">
-        <div class = "videoPlacement">
-            <div class = "Grid">
-                <input type="text" id="YoutubeURL" name="Video URl Here" style="position: relative; left: 5%; width: 90%; height: 90%; font-size: max-content;">
-                <div class = "NewOne" id = "YoutubeURL2">
-                    Replace Video by URL
-                </div>
-                <div></div>
-                <div></div>
-                <input type="text" id="YoutubeID" name="Video ID Here" style="position: relative; left: 5%; width: 90%; height: 90%; font-size: max-content;">
-                <div class = "NewOne" id = "YoutubeID2">
-                    Replace Video by ID
-                </div>
-                <div></div>
-                <div></div>
-                <div>
-                    Start:
-                    <input type="text" id="StartTime" name="" style="position: relative; width: 80%; height: 90%; font-size: max-content;">
-                </div>
-                <div>
-                    End:
-                    <input type="text" id="EndTime" name="" style="position: relative; width: 80%; height: 90%; font-size: max-content;">
+        <div class = "Placement">
+            <!-- Replace Video Elements -->
+            <div class = "GridReplace">
+                <input type="text" id="YoutubeURL" name="" placeholder="Enter Video URL or ID here" style="position: relative; left: 5%; width: 90%; height: 90%; font-size: 16px;">
+                <div class = "ButtonTemplate ButtonTop" id = "YoutubeURL2" tabindex="0" onclick="ReplaceVid()" onfocus="focusChange(1, 0)" onblur="focusChange(1, 1)">
+                    Click to Replace Video
                 </div>
             </div>
 
             <br>
+
+            <!-- Looping Elements -->
+            <div class = "GridLoop">
+                <div>
+                    <input class = "TextBoxLoop" type="text" id="StartTime" name="" placeholder="Start loop (default: 0)">
+                </div>
+                <div style = "text-align: center;">to</div>
+                <div>
+                    <input class = "TextBoxLoop" type="text" id="EndTime" name="" placeholder="End loop (default: end of video)">
+                </div>
+
+                <div class = "GridTwoButtons">
+                    <div class = "ButtonTemplate ButtonRed" tabindex="0" id = "clearStart" onclick="clearNum(0)" onfocus="focusChange(2, 0)" onblur="focusChange(2, 1)"> clear </div>
+                    <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "replaceStart" onclick="currentTimeSetTo(0)" onfocus="focusChange(3, 0)" onblur="focusChange(3, 1)"> Replace with Current Time </div> 
+                </div>
+                <div></div>
+                <div class = "GridTwoButtons">
+                    <div class = "ButtonTemplate ButtonRed" tabindex="0" id = "clearEnd" onclick="clearNum(1)" onfocus="focusChange(4, 0)" onblur="focusChange(4, 1)"> clear </div>
+                    <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "replaceEnd" onclick="currentTimeSetTo(1)" onfocus="focusChange(5, 0)" onblur="focusChange(5, 1)"> Replace with Current Time </div> 
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Moving the Video forward/backward elements -->
+            <div class = "GridForwardBackward">
+                <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "-15s" onclick="move(-15)" onfocus="focusChange(6, 0)" onblur="focusChange(6, 1)"> -15 sec </div>
+                <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "-10s" onclick="move(-10)" onfocus="focusChange(7, 0)" onblur="focusChange(7, 1)"> -10 sec </div>
+                <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "-5s" onclick="move(-5)" onfocus="focusChange(8, 0)" onblur="focusChange(8, 1)"> -5 sec </div>
+                <div> </div>
+                <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "5s" onclick="move(5)" onfocus="focusChange(9, 0)" onblur="focusChange(9, 1)"> +5 sec </div>
+                <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "10s" onclick="move(10)" onfocus="focusChange(10, 0)" onblur="focusChange(10, 1)"> +10 sec </div>
+                <div class = "ButtonTemplate ButtonCurrentTime" tabindex="0" id = "15s" onclick="move(15)" onfocus="focusChange(11, 0)" onblur="focusChange(11, 1)"> +15 sec </div>
+            </div>
             
+            <!-- Video Element -->
             <div id = "ytplayer"></div>
         </div>
     </body>
